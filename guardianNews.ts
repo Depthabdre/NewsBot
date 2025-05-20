@@ -33,7 +33,7 @@ async function fetchStudentFriendlyTechNews() {
       },
     });
 
-    const result = searchData.response.results[0];
+    const result = searchData.response.results[1];
     if (!result) {
       console.log('No relevant tech article found.');
       return;
