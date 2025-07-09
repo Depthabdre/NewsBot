@@ -20,7 +20,7 @@ async function fetchStudentFriendlyTechNews() {
   }
 
   try {
-    const keywords = 'AI OR coding OR apps OR education OR student OR startup';
+    const keywords = 'student OR AI OR coding OR apps OR education OR  startup';
 
     // 1) Get the single newest relevant article
     const { data: searchData } = await axios.get(`${BASE_URL}/search`, {
@@ -33,7 +33,7 @@ async function fetchStudentFriendlyTechNews() {
       },
     });
 
-    const result = searchData.response.results[1];
+    const result = searchData.response.results[0];
     if (!result) {
       console.log('No relevant tech article found.');
       return;
